@@ -2,7 +2,7 @@
 
 /*
 Plugin Name: WP-Wowauth
-Plugin URI: http://github.com/perrybutler/wp-oauth
+Plugin URI: http://github.com/resorath/wp-wowauth
 Description: Login and register using battle.net authentication, then connect your World of Warcraft character to your profile
 Version: 0.1
 Author: Sean Feil
@@ -701,14 +701,6 @@ Class WPOA {
 		// generate the login buttons for available providers:
 		// TODO: don't hard-code the buttons/providers here, we want to be able to add more providers without having to update this function...
 		$html = "";
-		$html .= $this->wpoa_login_button("google", "Google", $atts);
-		$html .= $this->wpoa_login_button("facebook", "Facebook", $atts);
-		$html .= $this->wpoa_login_button("linkedin", "LinkedIn", $atts);
-		$html .= $this->wpoa_login_button("github", "GitHub", $atts);
-		$html .= $this->wpoa_login_button("reddit", "Reddit", $atts);
-		$html .= $this->wpoa_login_button("windowslive", "Windows Live", $atts);
-		$html .= $this->wpoa_login_button("paypal", "PayPal", $atts);
-		$html .= $this->wpoa_login_button("instagram", "Instagram", $atts);
 		$html .= $this->wpoa_login_button("battlenet", "Battlenet", $atts);
 		if ($html == '') {
 			$html .= 'Sorry, no login providers have been enabled.';
